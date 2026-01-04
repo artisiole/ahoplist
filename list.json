@@ -5,15 +5,65 @@
         "imgsrc":"images/pain.jpg",
         "author":"cojiro",
         "tier":8},
+
         {"rank":2,
         "name":"Fuse",
         "imgsrc":"images/fuse.jpg",
         "author":"Dacciox and adamantite",
         "tier":5},
+
         {"rank":3,
         "name":"Climb",
         "imgsrc":"images/climb.jpg",
         "author":"mythril",
-        "tier":6}
+        "tier":6},
+
+        {"rank":4,
+        "name":"Grid",
+        "imgsrc":"images/grid.jpg",
+        "author":"mythril",
+        "tier":3},
+
+        {"rank":5,
+        "name":"Drift",
+        "imgsrc":"images/drift.jpg",
+        "author":"ｼElandi!! -fwo",
+        "tier":3},
+
+        {"rank":6,
+        "name":"Velocity",
+        "imgsrc":"images/velocity.jpg",
+        "author":"Buggajayjay ツ",
+        "tier":3},
+
+        {"rank":7,
+        "name":"Crop Top",
+        "imgsrc":"images/crop_top.jpg",
+        "author":"mythril",
+        "tier":2},
+
+        {"rank":8,
+        "name":"Tightrope",
+        "imgsrc":"images/tightrope.jpg",
+        "author":"artisiole",
+        "tier":2},
+
+        {"rank":9,
+        "name":"Orange",
+        "imgsrc":"images/orange.jpg",
+        "author":"Mac",
+        "tier":3},
+
+        {"rank":10,
+        "name":"Stop",
+        "imgsrc":"images/stop.jpg",
+        "author":"Dacciox",
+        "tier":3},
+
+        {"rank":11,
+        "name":"Castle",
+        "imgsrc":"images/castle.jpg",
+        "author":"corku",
+        "tier":2}
     ]
 }

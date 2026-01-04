@@ -1,4 +1,4 @@
-function addMap(rank, name, imgsrc, author, tier){
+function addMap(rank, name, imgsrc, author, tier, listSize){
     const mapDiv = document.createElement('div');
 
     mapDiv.classList.add('mapDiv');
@@ -7,10 +7,15 @@ function addMap(rank, name, imgsrc, author, tier){
     '<div class="thumbnail">'
     +'<img src="'+imgsrc+'"></img>'
     +'<h2>#' + rank + ' - '+name+'</h2>'
-    +'<p>by '+author+', Tier '+tier+' : 200 points</p>'
+    +'<p>by '+author+', Tier '+tier+'<br>'+calculatePoints(rank, listSize, 3, 200, 10)+' points</p>'
     +'</div>';
 
     document.querySelector('.main').appendChild(mapDiv);
+}
+
+// (Simple) formula for calculating number of points a completion yields
+function calculatePoints(rank, size, exponent, max, min){
+    return (((size - rank) ** exponent)/((size - 1) ** exponent)) * (max-min) + min;
 }
 
 console.log("Creating list...");
@@ -27,7 +32,7 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
         for(i = 0; i < data.list.length; i++){
             console.log(data.list[i]);
             // Add a map to the list based on json data
-            addMap(data.list[i].rank, data.list[i].name, data.list[i].imgsrc, data.list[i].author);
+            addMap(data.list[i].rank, data.list[i].name, data.list[i].imgsrc, data.list[i].author, data.list[i].tier, data.list.length);
         }
     })
     .catch(error => {
