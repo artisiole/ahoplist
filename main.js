@@ -15,7 +15,7 @@ function addMap(rank, name, imgsrc, author, tier, listSize){
 
 // (Simple) formula for calculating number of points a completion yields
 function calculatePoints(rank, size, exponent, max, min){
-    return (((size - rank) ** exponent)/((size - 1) ** exponent)) * (max-min) + min;
+    return ((((size - rank) ** exponent)/((size - 1) ** exponent)) * (max-min) + min).toFixed(2);
 }
 
 console.log("Creating list...");

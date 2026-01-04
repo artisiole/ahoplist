@@ -35,11 +35,17 @@ iframe {
 	margin: auto;
     display: flex;
     justify-content: center;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .mapDiv .thumbnail {
 	margin-left: 300px;
+
+	min-width: 1280px;
+	max-width: 1280px;
+
+	min-height: 240px;
+	max-height: 240px;
 }
 
 .mapDiv .thumbnail p {
@@ -50,6 +56,8 @@ iframe {
 	/* WTF */
 	margin-top: -40px;
 	margin-left: 450px;
+
+	text-align: center;
 }
 
 .mapDiv .thumbnail h2 {
@@ -58,7 +66,7 @@ iframe {
 	font-size: 48px;
 
 	/* WTF */
-	margin-top: -140px;
+	margin-top: -160px;
 	margin-left: 450px;
 }
 
