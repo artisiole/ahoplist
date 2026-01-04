@@ -7,17 +7,16 @@ function addMap(rank, name, imgsrc){
     '<div class="thumbnail">'
     +'<img src="'+imgsrc+'"></img>'
     +'<h2>#' + rank + ' - '+name+'</h2>'
-    +'<p>n completions: 200 points</p>'
+    +'<p>Tier 6 : n completions : 200 points</p>'
     +'</div>';
 
     document.querySelector('.main').appendChild(mapDiv);
 }
 
 console.log("Creating list...");
-addMap();
 
 // Load json file of list
-fetch('list.json')
+fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list.json')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -25,7 +24,11 @@ fetch('list.json')
         return response.json();
     })
     .then(data => {
-        console.log(data);
+        for(i = 0; i < data.list.length; i++){
+            console.log(data.list[i]);
+            // Add a map to the list based on json data
+            addMap(data.list[i].rank, data.list[i].name, data.list[i].imgsrc);
+        }
     })
     .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);
