@@ -1,46 +1,87 @@
 body {
-			background-image: linear-gradient(to bottom right, papayaWhip, linen);
-		}
+	background-image: linear-gradient(to bottom right, papayaWhip, linen);
+}
 		
-		h1 {
-			text-align: center;
-			font-family: Calibri, Arial, sans-serif;
-		}
+h1 {
+	text-align: center;
+	font-family: Calibri, Arial, sans-serif;
+}
 		
-		h2 {
-			text-align: center;
-			margin-left: 400px;
-			margin-right: 400px;
-			font-family: Calibri, Arial, sans-serif;
-		}
+h2 {
+	text-align: center;
+	margin-left: 400px;
+	margin-right: 400px;
+	font-family: Calibri, Arial, sans-serif;
+}
 		
-		p {
-			margin-left: 400px;
-			margin-right: 400px;
-			font-family: Calibri, Arial, sans-serif;
-		}
+p {
+	margin-left: 400px;
+	margin-right: 400px;
+	font-family: Calibri, Arial, sans-serif;
+}
 		
-		iframe {
-			margin-left: 400px;
-			margin-right: 400px;
-		}
+iframe {
+	margin-left: 400px;
+	margin-right: 400px;
+}
 		
-		.links {
-			display: flex;
-			column-gap: 20px;
-            justify-content: center;
-		}
+.links {
+    display: flex;
+	column-gap: 20px;
+    justify-content: center;
+}
+
+.mapDiv {
+	margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.mapDiv .thumbnail {
+	margin-left: 300px;
+}
+
+.mapDiv .thumbnail p {
+	font-family: Calibri, Arial, sans-serif;
+	font-weight: lighter;
+	font-size: 24px;
+
+	/* WTF */
+	margin-top: -40px;
+	margin-left: 450px;
+}
+
+.mapDiv .thumbnail h2 {
+	font-family: Calibri, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 48px;
+
+	/* WTF */
+	margin-top: -140px;
+	margin-left: 450px;
+}
+
+.mapDiv .thumbnail img{
+	outline-width: 4px;
+	outline-color: black;
+	outline-style: solid;
+	border-radius: 8px;
+	object-fit: scale-down;
+
+	max-width: 384px;
+	max-height: 216px;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	padding: 5px 10px;
+	border-radius: 8px;
+
+	transition: .5s;
+}
 		
-		button {
-			border: none;
-			background-color: transparent;
-			padding: 5px 10px;
-			border-radius: 8px;
-			
-			transition: .5s;
-		}
-		
-		button:hover {
-			box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
-			background-color: white;
-		}
+button:hover {
+	box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+	background-color: white;
+}

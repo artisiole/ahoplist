@@ -1,5 +1,10 @@
 {
     "list": [
-        {"rank":1,"name":"Pain"}
+        {"rank":1,
+        "name":"Pain",
+        "imgsrc":"images/pain.jpg"},
+        {"rank":2,
+        "name":"Fuse",
+        "imgsrc":"images/fuse.jpg"}
     ]
 }
