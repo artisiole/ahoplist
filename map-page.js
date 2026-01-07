@@ -36,9 +36,9 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
         document.getElementById("map-thumbnail").innerHTML = '<img src="'+imgsrc+'"></img>';
 
         // todo: Populate table with data retrieved from momentum mod API based on map id
-        // slight issue we cant access momentum mod api and i have social anxiety oopsss
-        //fetch("https://api.momentum-mod.org/v1/maps/"+id+"/leaderboard?gamemode=9&take=9999&trackType=0&trackNum=1")
+        // Currently no API access
         fetch("https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/data/test_map.json")
+        //fetch("https://api.momentum-mod.org/v1/maps/"+id+"/leaderboard?gamemode=9&take=100&trackType=0&trackNum=1")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
