@@ -1,40 +1,18 @@
-function addMap(rank, name, imgsrc, author, tier, listSize){
-    const mapDiv = document.createElement('div');
-
-    mapDiv.classList.add('mapDiv');
-
-    mapDiv.innerHTML = 
-    '<div class="thumbnail">'
-    +'<img src="'+imgsrc+'"></img>'
-    +'<h2>#' + rank + ' - '+name+'</h2>'
-    +'<p>by '+author+', Tier '+tier+'<br>'+calculatePoints(rank, listSize, 3, 200, 10)+' points</p>'
-    +'</div>';
-
-    document.querySelector('.main').appendChild(mapDiv);
+function openStats() {
+    console.log("Stats viewer");
+    window.location = "stats-viewer.html";
 }
 
-// (Simple) formula for calculating number of points a completion yields
-function calculatePoints(rank, size, exponent, max, min){
-    return ((((size - rank) ** exponent)/((size - 1) ** exponent)) * (max-min) + min).toFixed(2);
+function openAbout() {
+    console.log("About");
+    window.location = "stats-viewer.html";
 }
 
-console.log("Creating list...");
+function openList() {
+    console.log("List");
+    window.location = "index.html";
+}
 
-// Load json file of list
-fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        for(i = 0; i < data.list.length; i++){
-            console.log(data.list[i]);
-            // Add a map to the list based on json data
-            addMap(data.list[i].rank, data.list[i].name, data.list[i].imgsrc, data.list[i].author, data.list[i].tier, data.list.length);
-        }
-    })
-    .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
-    });
+document.getElementById("stats").addEventListener("click", openStats);
+document.getElementById("about").addEventListener("click",openAbout);
+document.getElementById("list").addEventListener("click",openList);
