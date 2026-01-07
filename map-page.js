@@ -6,6 +6,7 @@ let rank = 0;
 let imgsrc = "";
 let author = "";
 let tier = 0;
+let id = 0;
 
 fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list.json')
     .then(response => {
@@ -22,6 +23,7 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
                 imgsrc = data.list[i].imgsrc;
                 author = data.list[i].author;
                 tier = data.list[i].tier;
+                id = data.list[i].id;
             }
         }
 
@@ -29,8 +31,10 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
 
         document.getElementById("map-thumbnail").innerHTML = '<img src="'+imgsrc+'"></img>';
 
-        // Populate table with data retrieved from momentum mod API based on map id
-        fetch("https://api.momentum-mod.org/v1/maps/"+data.list[i].id+"/leaderboard?gamemode=9&take=9999&trackType=0&trackNum=1")
+        // todo: Populate table with data retrieved from momentum mod API based on map id
+        // slight issue we cant access momentum mod api and i have social anxiety oopsss
+        //fetch("https://api.momentum-mod.org/v1/maps/"+id+"/leaderboard?gamemode=9&take=9999&trackType=0&trackNum=1")
+        fetch("https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/data/test_map.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
