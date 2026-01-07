@@ -14,7 +14,7 @@
         "author":"Dacciox and adamantite",
         "tier":5,
         "id":460,
-        "par":90},
+        "par":300},
 
         {"rank":3,
         "name":"Climb",
@@ -22,7 +22,7 @@
         "author":"mythril",
         "tier":6,
         "id":421,
-        "par":90},
+        "par":120},
 
         {"rank":4,
         "name":"Grid",
@@ -30,7 +30,7 @@
         "author":"mythril",
         "tier":3,
         "id":235,
-        "par":90},
+        "par":600},
 
         {"rank":5,
         "name":"Drift",
@@ -38,7 +38,7 @@
         "author":"ｼElandi!! -fwo",
         "tier":3,
         "id":655,
-        "par":90},
+        "par":210},
 
         {"rank":6,
         "name":"Velocity",
@@ -46,7 +46,7 @@
         "author":"Buggajayjay ツ",
         "tier":3,
         "id":652,
-        "par":90},
+        "par":150},
 
         {"rank":7,
         "name":"Crop Top",
@@ -62,7 +62,7 @@
         "author":"artisiole",
         "tier":2,
         "id":832,
-        "par":90},
+        "par":5},
 
         {"rank":9,
         "name":"Orange",
