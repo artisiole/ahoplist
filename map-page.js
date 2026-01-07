@@ -1,6 +1,6 @@
 // The name of the selected map
-const mapName = window.location.href.split('?m=')[1];
-mapName.replaceAll("%20", " ");
+let mapName = window.location.href.split('?m=')[1];
+mapName = mapName.replaceAll("%20", " ");
 
 let rank = 0;
 let imgsrc = "";
