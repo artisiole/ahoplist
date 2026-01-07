@@ -108,7 +108,9 @@ iframe {
 .map-name h2 {
 	text-align: center;
 	font-family: Calibri, Arial, sans-serif;
-	font-size: 72px;
+	font-size: 32px;
+	font-weight: lighter;
+	margin-bottom: 20px;
 }
 
 .leaderboard {
