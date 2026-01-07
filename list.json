@@ -68,7 +68,8 @@
         "imgsrc":"images/stop.jpg",
         "author":"Dacciox",
         "tier":3,
-        "id":447},
+        "id":447,
+        "par":90},
 
         {"rank":11,
         "name":"Castle",

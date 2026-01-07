@@ -46,7 +46,7 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
             for(i = 0; i < data.data.length; i++){
                 const row = table.insertRow();
                 let userText = row.insertCell(); userText.innerHTML = data.data[i].user.alias;
-                let timeText = row.insertCell(); timeText.innerHTML = data.data[i].time.toFixed(2);
+                let timeText = row.insertCell(); timeText.innerHTML = time_format(data.data[i].time);
             }
         })
         .catch(error => {
@@ -56,3 +56,28 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
     .catch(error => {
         console.error('Map data fetch operation error:', error);
     });
+
+function time_format(time){
+    minutes = Math.floor(time / 60);
+    hours = Math.floor(minutes / 60); minutes %= 60;
+    seconds = (time % 60);
+
+    output = "";
+
+    if(hours > 0){
+        output += hours+":";
+        if(minutes < 10){
+            output += "0";
+        }
+    }
+
+    if(minutes > 0){
+        output += minutes+":";
+    }
+
+    if(seconds < 10){
+        output += "0";
+    }
+
+    return output + seconds.toFixed(2);
+}
