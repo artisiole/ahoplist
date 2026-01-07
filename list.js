@@ -1,3 +1,5 @@
+let mapsList = []
+
 function addMap(rank, name, imgsrc, author, tier, listSize){
     const mapDiv = document.createElement('div');
 
@@ -13,6 +15,7 @@ function addMap(rank, name, imgsrc, author, tier, listSize){
     mapDiv.id = name;
 
     document.querySelector('.main').appendChild(mapDiv);
+    mapsList.push(mapDiv);
 }
 
 // (Simple) formula for calculating number of points a completion yields
@@ -36,7 +39,18 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
             // Add a map to the list based on json data
             addMap(data.list[i].rank, data.list[i].name, data.list[i].imgsrc, data.list[i].author, data.list[i].tier, data.list.length);
         }
+
+        // Button functionality to each map div
+        for(let i = 0; i < mapsList.length; i++) {
+            mapsList[i].addEventListener("click", function(){openMap(mapsList[i].id)});
+        }
     })
     .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);
     });
+
+function openMap(filename)
+{
+    console.log("Map " + filename);
+    window.location = "map-page.html?m="+filename;
+}
