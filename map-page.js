@@ -29,9 +29,26 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
 
         document.getElementById("map-thumbnail").innerHTML = '<img src="'+imgsrc+'"></img>';
 
-        // Populate table with data
-
-    })
+        // Populate table with data (currently dummy placeholder data)
+        fetch("https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/data/test_map.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const table = document.getElementById("recordsTable")
+            for(i = 0; i < data.board.length; i++){
+                const row = table.insertRow();
+                let userText = row.insertCell(); userText.innerHTML = data.board[i].user;
+                let timeText = row.insertCell(); timeText.innerHTML = data.board[i].time;
+            }
+        })
+        .catch(error => {
+        console.error('Completion data fetch operation error:', error);
+        })
+        })
     .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
+        console.error('Map data fetch operation error:', error);
     });
