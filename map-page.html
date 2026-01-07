@@ -3,12 +3,28 @@
 	<head>
 		<title>ahoplist</title>
 		<script src="main.js" defer></script>
+		<script src="map-page.js" defer></script>
 		<link rel="stylesheet" href="style.css"> 
 	</head>
 <body>
-	<div class="main">
-		<h1>MAPNAME</h1>
-		<h2>#N</h2>
+	<div class="links">
+		 <button type="button" id="list">List</button>
+		 <button type="button" id="stats">Stats Viewer</button> 
+		 <button type="button" id="about">About</button>
+	</div>
+
+	<div class="map-name">
+		<h1 id="mapname">MAPNAME</h1>
+	</div>
+
+	<div class="map-thumbnail" id="map-thumbnail">
+		<img src=""></img>
+	</div>
+
+	<div class="leaderboard" id="records">
+		<table>
+			<tr><th>User</th><th>Time</th></tr>
+		</table>
 	</div>
 </body>
 </html>

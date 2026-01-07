@@ -81,6 +81,55 @@ iframe {
 	max-height: 216px;
 }
 
+.map-thumbnail {
+	margin: auto;
+    display: flex;
+    justify-content: center;
+	margin-bottom: 20px;
+}
+
+.map-thumbnail img{
+	outline-width: 4px;
+	outline-color: black;
+	outline-style: solid;
+	border-radius: 8px;
+	object-fit: scale-down;
+
+	max-width: 768px;
+	max-height: 432px;
+}
+
+.map-name h1 {
+	text-align: center;
+	font-family: Calibri, Arial, sans-serif;
+	font-size: 112px;
+}
+
+.map-name h2 {
+	text-align: center;
+	font-family: Calibri, Arial, sans-serif;
+	font-size: 72px;
+}
+
+.leaderboard {
+	margin: auto;
+    display: flex;
+    justify-content: center;
+	margin-bottom: 20px;
+}
+
+.leaderboard table {
+  border: 1px solid;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.leaderboard th, td {
+  padding: 20px;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 24px;
+}
+
 button {
 	border: none;
 	background-color: transparent;
