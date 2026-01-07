@@ -53,13 +53,13 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
                 
                 let timeText = row.insertCell();
                 
-                if(data.data[i].time < par){
+                if(data.data[i].time > par){
                     timeText.innerHTML = time_format(data.data[i].time);
                     userText.innerHTML = data.data[i].user.alias;
                 } else {
                     // BEWARE: Not sanitized yet!!!!
-                    timeText.innerHTML = "<i>"+time_format(data.data[i].time)+"</i>";
-                    userText.innerHTML = "<i>"+data.data[i].user.alias+"</i>";
+                    timeText.innerHTML = "<b>"+time_format(data.data[i].time)+"</b>";
+                    userText.innerHTML = "<b>"+data.data[i].user.alias+"</b>";
                 }
                 
             }
