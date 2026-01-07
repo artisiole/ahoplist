@@ -29,7 +29,7 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
 
         document.getElementById("map-thumbnail").innerHTML = '<img src="'+imgsrc+'"></img>';
 
-        // Populate table with data (currently dummy placeholder data)
+        // Populate table with data retrieved from momentum mod API based on map id
         fetch("https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/data/test_map.json")
         .then(response => {
             if (!response.ok) {
