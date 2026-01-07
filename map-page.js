@@ -1,5 +1,6 @@
 // The name of the selected map
 const mapName = window.location.href.split('?m=')[1];
+mapName.replaceAll("%20", " ");
 
 let rank = 0;
 let imgsrc = "";
@@ -27,6 +28,8 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
         document.getElementById("mapname").textContent = "#"+rank + " - " + mapName;
 
         document.getElementById("map-thumbnail").innerHTML = '<img src="'+imgsrc+'"></img>';
+
+        // Populate table with data
 
     })
     .catch(error => {
