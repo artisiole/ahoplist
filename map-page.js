@@ -30,7 +30,7 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
         document.getElementById("map-thumbnail").innerHTML = '<img src="'+imgsrc+'"></img>';
 
         // Populate table with data retrieved from momentum mod API based on map id
-        fetch("https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/data/test_map.json")
+        fetch("https://api.momentum-mod.org/v1/maps/"+data.list[i].id+"/leaderboard?gamemode=9&take=9999&trackType=0&trackNum=1")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -39,10 +39,10 @@ fetch('https://raw.githubusercontent.com/artisiole/ahoplist/refs/heads/main/list
         })
         .then(data => {
             const table = document.getElementById("recordsTable")
-            for(i = 0; i < data.board.length; i++){
+            for(i = 0; i < data.data.length; i++){
                 const row = table.insertRow();
-                let userText = row.insertCell(); userText.innerHTML = data.board[i].user;
-                let timeText = row.insertCell(); timeText.innerHTML = data.board[i].time;
+                let userText = row.insertCell(); userText.innerHTML = data.data[i].user.alias;
+                let timeText = row.insertCell(); timeText.innerHTML = data.data[i].time.toFixed(2);
             }
         })
         .catch(error => {
